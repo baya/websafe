@@ -1,6 +1,8 @@
 <h2>Js Escape</h2>
 <script>
   var user_dangerous = "<%=raw @evil_user_data %>";
-  var user_safe1 = "<%=h @evil_user_data %>;"
-  var user_safe2 = "<%= @evil_user_data %>;"
+  var user_safe1 = "<%=h @evil_user_data %>";
+  var user_safe2 = "<%= @evil_user_data %>";
+  var user_safe3 = "<%= escape_javascript @evil_user_data %>";
+  var user_safe4 = <%=raw @evil_user_data2.to_json %>;
 </script>
