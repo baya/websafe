@@ -1,0 +1,6 @@
+<h2>Attribute Escape</h2>
+<p class="dangerous1" value="<%=raw @evil_user_data %>">Hello Danger</p>
+<p class="dangerous2" value=<%=raw @evil_user_data_2 %>>Hello Danger</p>
+<p class="safe" value="<%=h @evil_user_data %>">Hello Safe</p>
+<p class="safe" value="<%= @evil_user_data %>">Hello Safe</p>
+
