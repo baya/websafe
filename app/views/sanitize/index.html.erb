@@ -1,0 +1,2 @@
+<h2>Sanitize</h2>
+<%= sanitize @evil_user_data, tags: %w(table div td), attributes: %w(id class style) %>

@@ -1,0 +1,3 @@
+<a class="dangerous" href="<%= @evil_user_data %>">XSS</a> <br/>
+<a class="safe" href="<%= URI.escape @evil_user_data %>">safe</a> <br/>
+<a class="safe" href="<%=  URI.escape @safe_user_data %>">safe</a> <br/>
