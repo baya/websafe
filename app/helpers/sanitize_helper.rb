@@ -1,0 +1,2 @@
+module SanitizeHelper
+end

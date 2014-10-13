@@ -1,0 +1,2 @@
+module UrlEscapeHelper
+end
