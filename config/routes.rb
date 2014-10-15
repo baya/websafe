@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   get 'dom_base_xss' => 'dom_base_xss#index'
   get 'httponly_flag/true' => 'httponly_flag#true'
   get 'httponly_flag/false' => 'httponly_flag#false'
+  namespace :csp do
+    get 'script-src/none' => 'script_src#none'
+  end
+
+  post 'csp_report' => 'csp_report#create'
+
 end

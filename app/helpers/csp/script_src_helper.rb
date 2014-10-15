@@ -1,0 +1,2 @@
+module Csp::ScriptSrcHelper
+end
