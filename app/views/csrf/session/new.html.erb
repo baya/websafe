@@ -1,0 +1,12 @@
+<h2>CSRF-Victim-Site: Login </h2>
+<%= form_tag csrf_login_url do -%>
+  <div>
+    <label>帐号:</label>
+    <%= text_field_tag 'login' %>
+  </div>
+  <div>
+    <label>密码:</label>
+    <%= password_field_tag 'password' %>
+  </div>
+  <%= submit_tag '登录' %>
+<% end  -%>

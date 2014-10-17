@@ -1,0 +1,2 @@
+module Csrf::AdminUserHelper
+end
