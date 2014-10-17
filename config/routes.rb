@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'html_escape' => 'html_escape#index'
   get 'attribute_escape' => 'attribute_escape#index'
   get 'js_escape' => 'js_escape#index'
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
   get 'dom_base_xss' => 'dom_base_xss#index'
   get 'httponly_flag/true' => 'httponly_flag#true'
   get 'httponly_flag/false' => 'httponly_flag#false'
+
   namespace :csp do
     get 'script-src/none' => 'script_src#none'
     get 'script-src/self' => 'script_src#self'
@@ -19,6 +21,7 @@ Rails.application.routes.draw do
     get 'script-src/unsafe-eval' => 'script_src#unsafe_eval'
     get 'default-src/self' => 'default_src#self'
     get 'misc/default-script-src' => 'misc#default_script_src'
+    get 'report-only' => 'report_only#index'
   end
 
   post 'csp_report' => 'csp_report#create'
