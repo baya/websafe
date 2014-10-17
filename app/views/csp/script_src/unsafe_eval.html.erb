@@ -1,0 +1,15 @@
+<h2>CSP: script-src 'unsafe-eval'</h2>
+
+<script class="allowed">
+
+ eval("alert('XSS')");
+
+</script>
+
+<script class="allowed">
+ setTimeout("document.querySelector('a').style.display = 'none';", 10);
+ setInterval("clock()",50);
+ var myFunction = new Function("a", "b", "return a * b");
+ function clock() {
+ };
+</script>

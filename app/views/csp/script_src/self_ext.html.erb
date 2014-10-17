@@ -1,0 +1,11 @@
+<h2>CSP: script-src 'self external'</h2>
+<%= javascript_include_tag "//example.com/a1.js"%>
+<%= javascript_include_tag "//example.com/a2.js"%>
+<%= javascript_include_tag "//evil.example.com/b1.js"%>
+<%= javascript_include_tag "//apis.google.com/d1.js"%>
+<%= javascript_include_tag "//apis.google.com/d2.js"%>
+<%= javascript_include_tag "//apis.google.com/d3.js"%>
+
+<script>
+ alert("I will be disabled by csp");
+</script>

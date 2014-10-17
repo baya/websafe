@@ -1,0 +1,13 @@
+<h2>CSP: script-src 'self-nonce'</h2>
+
+<script class="blocked">
+ alert("I will be blocked by csp");
+</script>
+
+<script class="blocked" nonce="123">
+ alert("I will be blocked by csp");
+</script>
+
+<script class="allowed" nonce="<%= @rand %>">
+  alert("Allowed because nonce is valid.")
+</script>

@@ -1,0 +1,6 @@
+<h2>CSP: default-src 'self'</h2>
+<%= javascript_include_tag "//evil.example.com/b1.js"%>
+
+<script class="blocked">
+ alert("I will be blocked by csp");
+</script>

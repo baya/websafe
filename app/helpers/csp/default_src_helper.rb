@@ -1,0 +1,2 @@
+module Csp::DefaultSrcHelper
+end
