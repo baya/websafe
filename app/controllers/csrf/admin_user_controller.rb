@@ -7,12 +7,22 @@ class Csrf::AdminUserController < ApplicationController
   end
 
   def unsafe_create
+    admin_user = AdminUser.create admin_user_params
+    if admin_user
+      render text: 'ok'
+    else
+      redirect_to :new
+    end
   end
 
   def create
   end
 
   private
+
+  def admin_user_params
+    params.required(:admin).permit(:login, :password)
+  end
 
   def auth_admin
     if current_admin.nil?

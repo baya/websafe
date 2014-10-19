@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   post 'csp_report' => 'csp_report#create'
 
   namespace :csrf do
+
     scope :admin do
       get 'login' => 'session#new'
       post 'login' => 'session#create'
@@ -36,6 +37,11 @@ Rails.application.routes.draw do
       get 'admin_user/unsafe_create' => 'admin_user#unsafe_create'
       post 'admin_user/create' => 'admin_user#create'
     end
+
+    scope :attacker do
+      get 'hook' => 'hook#index'
+    end
+
   end
 
 end

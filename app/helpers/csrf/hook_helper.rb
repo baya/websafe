@@ -1,0 +1,2 @@
+module Csrf::HookHelper
+end
