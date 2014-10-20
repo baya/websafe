@@ -7,6 +7,7 @@ class Csrf::SessionController < ApplicationController
   def create
     @admin = authenticate_admin
     if @admin
+      reset_session
       session[:auid] = @admin.id
       render text: '登录成功'
     else
