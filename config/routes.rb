@@ -32,6 +32,7 @@ Rails.application.routes.draw do
       get 'login' => 'session#new'
       post 'login' => 'session#create'
       delete 'logout' => 'session#destroy'
+      get 'logout' => 'session#destroy'
 
       get 'admin_user/new' => 'admin_user#new'
       get 'admin_user/unsafe_create' => 'admin_user#unsafe_create'

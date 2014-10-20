@@ -15,6 +15,10 @@ class Csrf::SessionController < ApplicationController
   end
 
   def destroy
+    session[:auid] = nil
+    @current_admin = nil
+
+    render text: '退出成功'
   end
 
   private

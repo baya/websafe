@@ -13,3 +13,16 @@
   </div>
   <%= submit_tag '创建' %>
 <% end  -%>
+
+<h3>使用 POST 方法去请求创建 admin, 这是比较安全的</h3>
+<%= form_tag csrf_admin_user_create_url, method: 'POST' do -%>
+  <div>
+    <label>帐号:</label>
+    <%= text_field_tag 'admin[login]' %>
+  </div>
+  <div>
+    <label>密码:</label>
+    <%= password_field_tag 'admin[password]' %>
+  </div>
+  <%= submit_tag '创建' %>
+<% end  -%>

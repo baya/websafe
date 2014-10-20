@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 class Csrf::AdminUserController < ApplicationController
 
+  # skip_before_filter :verify_authenticity_token
   before_filter :auth_admin
 
   def new
@@ -16,6 +17,12 @@ class Csrf::AdminUserController < ApplicationController
   end
 
   def create
+    admin_user = AdminUser.create admin_user_params
+    if admin_user
+      render text: 'ok'
+    else
+      redirect_to :new
+    end
   end
 
   private
